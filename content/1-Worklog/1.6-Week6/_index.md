@@ -1,5 +1,5 @@
 ---
-title: "Week 6 Worklog"
+title: "Worklog Tuần 6"
 date: "2025-09-08"
 weight: 1
 chapter: false
@@ -7,53 +7,31 @@ pre: " <b> 1.6. </b> "
 ---
 
 {{% notice warning %}}
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-### Week 6 Objectives:
+### Mục tiêu tuần 6:
 
-- Connect and get acquainted with members of First Cloud Journey.
-- Understand basic AWS services, how to use the console & CLI.
+- Kết nối, làm quen với các thành viên trong First Cloud Journey.
+- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
 
-### Tasks to be carried out this week:
+### Các công việc cần triển khai trong tuần này:
 
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP <br>                              | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+# Tuần 6 – Thiết kế Kiến trúc Giải pháp, Đề xuất Dự án & Thông tin Chuyên sâu về Dữ liệu
 
-### Week 6 Achievements:
+| Ngày  | Nhiệm vụ                                                                                                          | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| :---- | :---------------------------------------------------------------------------------------------------------------- | :----------- | :-------------- | :----------------- |
+| **2** | Bắt đầu vẽ sơ đồ cấu trúc AWS                                                                                     | 13/10/2025   | 13/10/2025      | Sơ đồ kiến trúc    |
+| **3** | Tham dự sự kiện Data Resiliency in a Cloud-first World (Khả năng phục hồi dữ liệu trong thế giới ưu tiên đám mây) | 14/10/2025   | 14/10/2025      |                    |
+| **4** | Viết tài liệu cho bản đề xuất (proposal)                                                                          | 15/10/2025   | 15/10/2025      | Link tài liệu      |
+| **5** | Tham dự sự kiện Data Science on AWS (Khoa học dữ liệu trên AWS)                                                   | 16/10/2025   | 16/10/2025      |                    |
+| **6** |                                                                                                                   | 17/10/2025   | 17/10/2025      |                    |
 
-- Understood what AWS is and mastered the basic service groups:
+---
 
-  - Compute
-  - Storage
-  - Networking
-  - Database
-  - ...
+### Thu Hoạch Tuần 6: Hoàn Thiện Thiết Kế Giải Pháp và Định Hướng Dữ Liệu
 
-- Successfully created and configured an AWS Free Tier account.
+Tuần 6 là tuần cốt lõi trong việc chuẩn bị, đảm bảo rằng nền tảng thiết kế kỹ thuật của dự án nhóm là vững chắc và phù hợp với các chuẩn mực Cloud.
 
-- Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-- Installed and configured AWS CLI on the computer, including:
-
-  - Access Key
-  - Secret Key
-  - Default Region
-  - ...
-
-- Used AWS CLI to perform basic operations such as:
-
-  - Check account & configuration information
-  - Retrieve the list of regions
-  - View EC2 service
-  - Create and manage key pairs
-  - Check information about running services
-  - ...
-
-- Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-- ...
+- **Kiến trúc & Thiết kế Dự án (Project Architecture & Design):** Đã chuyển đổi ý tưởng thành sơ đồ kiến trúc AWS chi tiết. Hoàn thiện Bản đề xuất Dự án (Project Proposal) chính thức, bao gồm các quyết định về công nghệ (Serverless) và các yêu cầu phi chức năng.
+- **Khả năng phục hồi dữ liệu (Data Resiliency):** Hiểu được tầm quan trọng của việc phục hồi dữ liệu khi sự cố trung tâm dữ liệu ở Hàn Quốc xảy ra.
