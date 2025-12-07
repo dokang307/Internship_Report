@@ -1,9 +1,9 @@
 ---
-title: "Vietnam Cloud Day"
+title: "Event 1"
 date: 2025-09-18
 weight: 7
 chapter: false
-pre: " <b> 4.7. </b> "
+pre: " <b> 4.1. </b> "
 ---
 
 # Event Recap: “Vietnam Cloud Day”
