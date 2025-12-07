@@ -21,9 +21,11 @@ pre: " <b> 4.2. </b> "
 
 ### Danh Sách Diễn Giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Paul Haverfield** -
+  Principal Storage Specialist BDM, APJ
+- **Tamelly Lim** - Specialist Solutions Architect
+- **Ameen Khan S** - GTM specialist for Storage - Data & AI pillar covering ASEAN markets
+- **Paul Hidalgo** -
 
 ### Nội Dung Nổi Bật
 
