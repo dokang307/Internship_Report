@@ -29,7 +29,7 @@ pre: " <b> 1.9. </b> "
 
 ---
 
-### Week 9 achievement: Challenges in Model Training and Data Quality
+### Week 9 Harvest: Challenges in Model Training and Data Quality
 
 This week focused heavily on model training techniques, and I faced real-world Data Science challenges:
 
