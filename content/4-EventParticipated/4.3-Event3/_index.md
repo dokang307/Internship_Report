@@ -1,13 +1,9 @@
-Here is the English translation of the event summary.
-
 ---
-
 title: "Event 3"
 date: "2025-09-08"
 weight: 1
 chapter: false
 pre: " <b> 4.3. </b> "
-
 ---
 
 {{% notice warning %}}
