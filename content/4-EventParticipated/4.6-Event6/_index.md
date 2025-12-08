@@ -1,132 +1,97 @@
+Here is the English version of the report, maintaining the structure and formatting suitable for your AWS program submission.
+
 ---
+
 title: "Event 6"
 date: "2025-09-08"
 weight: 1
 chapter: false
 pre: " <b> 4.6. </b> "
+
 ---
 
 {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
+⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** for your report, including this warning.
 {{% /notice %}}
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Event Summary Report: AWS Cloud Mastery Series #3
 
-### Event Objectives
+**Topic:** AWS Well-Architected – Security Pillar Workshop
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+## 1. Overview & Speakers
 
-### Speakers
+The event focused on the most critical pillar within the AWS Well-Architected Framework: **Security**. The content was designed to equip attendees with knowledge ranging from fundamental to advanced levels regarding identity, monitoring, infrastructure protection, data protection, and incident response processes.
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+**Speakers & Experts:**
+The event gathered experts from the AWS Community (AWS Community Builders), AWS Cloud Club Captains from various universities (HCMUTE, SGU, PTIT, HUFLIT), Cloud Engineers from FCJ, and specially featuring **Mendel Grabski** (Security & DevOps Expert).
 
-### Key Highlights
+**About AWS Cloud Club:**
+This is a network connecting students and professionals, helping to develop technical leadership skills, providing hands-on experiences, and offering long-term mentoring opportunities. The participating Cloud Clubs under FCJA include: HCMUTE, SGU, PTIT, and HUFLIT.
 
-#### Identifying the drawbacks of legacy application architecture
+## 2. Key Technical Highlights
 
-- Long product release cycles → Lost revenue/missed opportunities
-- Inefficient operations → Reduced productivity, higher costs
-- Non-compliance with security regulations → Security breaches, loss of reputation
+### A. Identity & Access Management (IAM)
 
-#### Transitioning to modern application architecture – Microservices
+IAM is defined as the "first line of defense." The session emphasized the shift from manual management to automation and strict adherence to key principles:
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+- **Least Privilege Principle:** Grant only the necessary permissions required to perform a task.
+- **Root User Protection:** Delete access keys immediately after creation.
+- **Service Control Policies (SCPs):** Use Organization-level policies to set a "ceiling" (maximum available permissions) for member accounts (Note: SCPs only filter permissions; they do not grant them).
+- **Permission Boundaries:** Set the maximum permissions that an identity-based policy can grant to a specific User/Role.
+- **Multi-Factor Authentication (MFA):** Encouraged the use of FIDO2 (hardware keys/biometrics) over traditional TOTP.
+- **Credential Rotation:** Use **AWS Secrets Manager** to automate the rotation process (create -> set -> test -> finish) and integrate with EventBridge to manage schedules, eliminating risks associated with "hardcoded credentials."
 
-- **Queue Management**: Handle asynchronous tasks
-- **Caching Strategy**: Optimize performance
-- **Message Handling**: Flexible inter-service communication
+### B. Continuous Monitoring & Threat Detection
 
-#### Domain-Driven Design (DDD)
+The focus was on building comprehensive visibility and automated response capabilities:
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts
-- **Bookstore case study**: Demonstrates real-world DDD application
-- **Context mapping**: 7 patterns for integrating bounded contexts
+- **Multi-Layer Monitoring:** Combining CloudTrail (recording API calls, S3/Lambda access) and VPC Flow Logs (network traffic).
+- **Event-Driven Security:** Using **EventBridge** as a central event bus to route real-time alerts to Lambda/SNS/SQS or coordinate actions across different accounts (Cross-account routing).
+- **Detection-as-Code:** Managing detection rules and queries (CloudTrail Lake queries) as code (version control) to ensure consistent deployment across the organization.
 
-#### Event-Driven Architecture
+**Deep Dive into Amazon GuardDuty:**
+This is an intelligent threat detection solution that operates continuously based on three main data sources: CloudTrail, VPC Flow Logs, and DNS Logs.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming
-- **Benefits**: Loose coupling, scalability, resilience
-- **Sync vs async comparison**: Understanding the trade-offs
+- **Expanded Coverage:** Protection for S3, EKS, RDS (brute-force detection), Lambda (suspicious network activity), and Malware Protection (EBS scanning).
+- **Runtime Monitoring:** Uses an Agent to monitor deep inside the OS (processes, file access) on EC2/EKS/Fargate.
 
-#### Compute Evolution
+### C. Compliance & Infrastructure as Code (IaC)
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria for appropriate choice
+Security compliance is no longer a manual check but is integrated into the deployment pipeline:
 
-#### Amazon Q Developer
+- **Applied Standards:** AWS Foundational Security Best Practices, CIS Benchmark, PCI DSS, NIST.
+- **Enforcement Mechanism:** Using **AWS CloudFormation** (IaC) to deploy standard configurations, combined with **AWS Security Hub** to automatically audit resources against defined standards.
 
-- **SDLC automation**: From planning to maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+### D. Network & Data Protection
 
-### Key Takeaways
+- **Network Security:** Clearly distinguishing between Security Groups (Stateful - instance level firewall) and NACLs (Stateless - subnet level firewall). Introduction to AWS Network Firewall for advanced Egress filtering/IPS and integration with Threat Intelligence to automatically block malicious traffic.
+- **Data Protection:**
+  - **Encryption:** Using KMS with Customer Master Keys (CMK) and Policy conditions to control decryption contexts.
+  - **Certificates:** Using AWS ACM to manage and automatically renew SSL/TLS certificates.
+  - **Service Security:** Enforcing HTTPS/TLS 1.2+ for S3 (via Bucket Policy) and Databases (e.g., PostgreSQL `rds.force_ssl=1`).
 
-#### Design Mindset
+### E. Incident Response (IR)
 
-- **Business-first approach**: Always start from the business domain, not the technology
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams
-- **Bounded contexts**: Identifying and managing complexity in large systems
+The standard IR process consists of 5 steps: **Preparation -> Detection & Analysis -> Containment -> Eradication & Recovery -> Post-Incident Activity**.
 
-#### Technical Architecture
+- **Prevention Strategy:** Never make S3 buckets public, isolate sensitive services in private subnets, and ensure all infrastructure changes go through IaC with a review process (double-gate).
 
-- **Event storming technique**: Practical method for modeling business processes
-- Use **event-driven communication** instead of synchronous calls
-- **Integration patterns**: When to use sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless
+## 3. Practical Experience & Q&A
 
-#### Modernization Strategy
+The event provided high practical value, specifically aligning with the **"Automated Incident Response and Forensics"** project our team is developing.
 
-- **Phased approach**: No rushing — follow a clear roadmap
-- **7Rs framework**: Multiple modernization paths depending on the application
-- **ROI measurement**: Cost reduction + business agility
+**Discussion Point:**
+During our project testing, the team noticed that **Amazon GuardDuty** has a latency of about 5 minutes to generate a finding after an incident occurs. We asked about solutions to reduce this latency.
 
-### Applying to Work
+**Expert Answer:**
 
-- **Apply DDD** to current projects: Event storming sessions with business teams
-- **Refactor microservices**: Use bounded contexts to define service boundaries
-- **Implement event-driven patterns**: Replace some sync calls with async messaging
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity
+- **The Nature of the Service:** The GuardDuty latency is an accepted technical characteristic because the system needs time to analyze large datasets to accurately determine threats and avoid false positives.
+- **Alternative Solutions:** To achieve near real-time detection, the expert suggested integrating 3rd party solutions like **OpenClarity** (open source) or building custom anomaly detection logic based on CloudTrail events.
 
-### Event Experience
+**Networking:**
+After the event, Mr. **Mendel Grabski** (Ex-Head of Security & DevOps) expressed interest and offered professional support for our project, opening up valuable collaboration and mentoring opportunities.
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+#### Some photos from the event participation
 
-#### Learning from highly skilled speakers
-
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.
-
-#### Hands-on technical exposure
-
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.
-
-#### Leveraging modern tools
-
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.
-
-#### Networking and discussions
-
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.
-
-#### Lessons learned
-
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.
-
-#### Some event photos
-
-_Add your event photos here_
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+- _[Add your photos here]_
+  > Overall, the event not only provided technical knowledge but also changed my mindset regarding application design, system modernization, and effective team collaboration.
