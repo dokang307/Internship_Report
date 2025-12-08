@@ -10,8 +10,11 @@ pre: " <b> 6. </b> "
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
 {{% /notice %}}
 
-During my internship at **[Company/Organization Name]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.
+During my internship at **Amazon Web Services Vietnam Company Limited** from **September 8, 2025** to **December 28, 2025**, I had the opportunity to learn, hone my skills, and apply the academic knowledge I acquired at university to a real-world working environment.
+
+I participated in 8 office sessions and 6 events. Although I personally feel that the number of activities I attended was relatively limited, these sessions provided me with the opportunity to network with new peers and learn a great deal from them. Additionally, the office visits allowed me to connect with the mentors. I had several interactions with them, but I built the closest connection with Mr. Thinh and Mr. Hoang Anh, with whom I frequently exchange messages.
+
+Through these experiences, I have noticed a gradual shift in my mindset. I am transitioning from a student perspective to becoming more mature and adapting to the requirements of corporate culture. I believe this transformation is valuable and essential to prepare myself for my future career.
 
 In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
 
