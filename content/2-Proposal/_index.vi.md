@@ -79,8 +79,6 @@ Skyline Team sẽ cung cấp dịch vụ chuyển đổi số toàn diện, bao 
 
 ### 1.3 CÁC GIẢ ĐỊNH
 
-Dự án được triển khai dựa trên các giả định sau. Nếu có thay đổi, phạm vi và tiến độ có thể cần điều chỉnh:
-
 **Giả định về Kỹ thuật & Kiến trúc:**
 
 - **Mã nguồn:** Ứng dụng chạy Local hiện tại (Frontend & Backend) đã hoàn thiện về mặt logic chức năng. Dự án tập trung vào việc Refactoring (tái cấu trúc) để đưa lên Cloud (Serverless), không bao gồm phát triển tính năng mới.
@@ -199,8 +197,6 @@ _Khu vực: Asia Pacific (Singapore)_
 | **Ops**       | CloudWatch   | Logs, Metrics, Alarms                                         | ~$9.41               |
 | **CI/CD**     | CodePipeline | 1 Active Pipeline                                             | ~$1.05               |
 | **Tổng cộng** |              |                                                               | **~$108.38 / Tháng** |
-
-_Lưu ý: Chi phí thực tế có thể thấp hơn nhờ gói Free Tier (12 tháng đầu) và AWS Credit cho sinh viên._
 
 ---
 

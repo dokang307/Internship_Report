@@ -79,8 +79,6 @@ The Skyline Team will provide comprehensive digital transformation services, inc
 
 ### 1.3 ASSUMPTIONS
 
-The project is implemented based on the following assumptions. If changes occur, the scope and schedule may need adjustment:
-
 **Technical & Architectural Assumptions:**
 
 - **Source Code:** The current Local application (Frontend & Backend) is functionally complete. The project focuses on Refactoring for the Cloud (Serverless), excluding the development of new features.
@@ -199,8 +197,6 @@ _Region: Asia Pacific (Singapore)_
 | **Ops**      | CloudWatch   | Logs, Metrics, Alarms                                         | ~$9.41               |
 | **CI/CD**    | CodePipeline | 1 Active Pipeline                                             | ~$1.05               |
 | **Total**    |              |                                                               | **~$108.38 / Month** |
-
-_Note: Actual costs may be lower thanks to the Free Tier (first 12 months) and AWS Credits for students._
 
 ---
 
