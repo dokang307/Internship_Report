@@ -1,5 +1,3 @@
-Here is the English version of the report, maintaining the structure and formatting suitable for your AWS program submission.
-
 ---
 
 title: "Event 6"
