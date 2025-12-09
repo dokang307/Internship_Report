@@ -1,28 +1,10 @@
 ---
-
 title: "Các sự kiện đã tham gia"
 date: "2025-09-08"
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
-
 ---
-
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-> Trong phần này, bạn nên liệt kê và mô tả chi tiết các sự kiện bạn đã tham gia trong quá trình thực tập hoặc làm việc.
->
-> Mỗi sự kiện nên được trình bày theo định dạng Sự kiện 1, Sự kiện 2, Sự kiện 3…, cùng với các chi tiết sau:
->
-> - Tên sự kiện
-> - Ngày và giờ
-> - Địa điểm (nếu có)
-> - Vai trò của bạn trong sự kiện (người tham dự, hỗ trợ sự kiện, diễn giả, v.v.)
-> - Mô tả ngắn gọn về nội dung và các hoạt động chính của sự kiện
-> - Kết quả hoặc giá trị đạt được (bài học kinh nghiệm, kỹ năng mới, đóng góp cho nhóm/dự án)
-> - Danh sách này giúp thể hiện sự tham gia thực tế cũng như các kỹ năng mềm và kinh nghiệm bạn đã tích lũy được từ mỗi sự kiện.
 
 Trong suốt quá trình thực tập, tôi đã tham gia vào nhiều sự kiện khác nhau. Mỗi sự kiện là một trải nghiệm đáng nhớ, mang lại những kiến thức mới mẻ, thú vị và bổ ích, cùng những món quà và những khoảnh khắc tuyệt vời.
 
