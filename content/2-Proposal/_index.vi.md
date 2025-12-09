@@ -164,8 +164,6 @@ Dự án áp dụng mô hình Agile Scrum trong 8 tuần (4 Sprints):
 
 ### 3.2 NGOÀI PHẠM VI DỰ ÁN (OUT OF SCOPE)
 
-Do giới hạn về thời gian và tài nguyên của giai đoạn MVP, các hạng mục sau chưa được bao gồm:
-
 - Thuật toán tìm kiếm người dùng tối ưu theo vị trí thực (Geo-location) (Hiện tại sử dụng logic đơn giản hóa).
 - Khả năng tự động mở rộng (Auto-scaling) phức tạp cho tầng Database (Hiện tại dùng RDS cơ bản).
 - Tối ưu hóa độ trễ chuyên sâu (Latency Optimization) cho các khu vực ngoài Singapore.
@@ -270,16 +268,32 @@ Dưới đây là bản dịch tiếng Việt, giữ nguyên định dạng liê
 
 **\*Ghi chú về Hiệu quả Chi phí:** Chi phí nhân lực cho dự án này được hỗ trợ như một phần của kỳ Thực tập tại Đại học FPT và chương trình AWS First Cloud Journey (FCJ). Khoản ước tính $15 đại diện cho chi phí vận hành hạ tầng (Sử dụng AWS Credits) cần thiết cho các môi trường phát triển và kiểm thử.
 
-## 7. NGHIỆM THU
+---
 
-### 7.1 Bàn giao Sản phẩm:
+### 7. NGHIỆM THU (ACCEPTANCE)
 
-Sau khi hoàn thành giai đoạn "Bàn giao", Skyline Team sẽ gửi toàn bộ Mã nguồn, Tài liệu Kiến trúc, Tài khoản Admin và Hướng dẫn vận hành cho Khách hàng/Mentor.
+#### **7.1 Bàn giao Sản phẩm (Submission of Deliverables):**
 
-### 7.2 Thời gian & Quy trình Nghiệm thu:
+Khi hoàn thành giai đoạn cuối cùng ("Bàn giao"), Đội ngũ Skyline (BÊN CUNG CẤP) sẽ chuyển giao các Sản phẩm hữu hình liên quan (Mã nguồn, Tài liệu Kiến trúc AWS, Thông tin đăng nhập Quản trị, và Tài liệu Vận hành) cho Các bên liên quan/Giảng viên của Dự án (KHÁCH HÀNG). Việc bàn giao này sẽ đi kèm với một Biểu mẫu Nghiệm thu (hoặc một Email Xác nhận Nghiệm thu chính thức).
 
-Khách hàng có 05 ngày làm việc để kiểm tra và thực hiện UAT. Nếu sản phẩm đáp ứng Tiêu chí thành công (Mục 1.2), Khách hàng sẽ ký xác nhận nghiệm thu.
+#### **7.2 Thời hạn Nghiệm thu & Đánh giá:**
 
-### 7.3 Xử lý Lỗi:
+Ngay khi nhận được bàn giao, Khách hàng sẽ tiến hành xem xét, đánh giá và thực hiện Kiểm thử Chấp nhận Người dùng (UAT) trên (các) Sản phẩm bàn giao trong vòng năm (5) ngày làm việc (“Thời hạn Nghiệm thu”). Quá trình đánh giá này nhằm xác định xem liệu mỗi Sản phẩm bàn giao có đáp ứng các Tiêu chí Thành công của Dự án (được định nghĩa trong Mục 1.2) và tuân thủ Kiến trúc AWS (được định nghĩa trong Mục 2.1) trên mọi khía cạnh trọng yếu hay không.
 
-Nếu phát sinh lỗi nghiêm trọng hoặc thiếu tính năng so với phạm vi đã cam kết, Skyline Team có trách nhiệm khắc phục và gửi lại để nghiệm thu trong thời gian sớm nhất.
+#### **7.3 Xác nhận Nghiệm thu:**
+
+Nếu Sản phẩm bàn giao đáp ứng các tiêu chí nghiệm thu, Khách hàng sẽ cung cấp xác nhận nghiệm thu bằng văn bản cho Bên Cung cấp thông qua Biểu mẫu Nghiệm thu trước khi kết thúc Thời hạn Nghiệm thu. Chữ ký này (hoặc xác nhận bằng văn bản tương đương) đánh dấu việc dự án chính thức hoàn tất và đóng lại.
+
+#### **7.4 Từ chối & Khắc phục:**
+
+Đối với Sản phẩm bàn giao không được chấp nhận do sự không phù hợp (ví dụ: Lỗi nghiêm trọng, Lỗ hổng bảo mật, hoặc thiếu tính năng so với Phạm vi Công việc), Khách hàng sẽ nêu rõ lý do chi tiết cho việc từ chối trên Biểu mẫu Nghiệm thu (“Thông báo Từ chối”) trong Thời hạn Nghiệm thu.
+
+Khi nhận được Thông báo Từ chối, Bên Cung cấp sẽ kịp thời khắc phục mọi khiếm khuyết hoặc sự không phù hợp ở mức độ được yêu cầu. Sau đó, Bên Cung cấp sẽ gửi lại Sản phẩm bàn giao đã chỉnh sửa cho Khách hàng, và quy trình nghiệm thu nêu trên sẽ được lặp lại.
+
+#### **7.5 Phạm vi Đánh giá lại:**
+
+Khách hàng sẽ giới hạn việc xem xét các Sản phẩm bàn giao được gửi lại ở việc xác định xem Bên Cung cấp đã khắc phục các khiếm khuyết được nêu trong Thông báo Từ chối hay chưa, cũng như đánh giá các ảnh hưởng (nếu có) của những sửa đổi này đối với các phần khác của hệ thống.
+
+#### **7.6 Mặc nhiên Chấp nhận (Deemed Acceptance):**
+
+Nếu Khách hàng không cung cấp cho Bên Cung cấp Thông báo Từ chối hoặc Biểu mẫu Nghiệm thu đã ký như mô tả ở trên trước khi kết thúc Thời hạn Nghiệm thu áp dụng, thì (các) Sản phẩm bàn giao tương ứng và toàn bộ dự án sẽ được coi là đã được nghiệm thu.

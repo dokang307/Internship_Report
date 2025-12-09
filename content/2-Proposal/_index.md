@@ -47,12 +47,15 @@ pre: " <b> 2. </b> "
 ### 1.1 EXECUTIVE SUMMARY
 
 **Customer Background:**
+
 The DaiVietBlood system is designed to serve the community, including voluntary blood donors, patients in need of emergency blood, and healthcare professionals in Vietnam. The primary customers are blood donors, patient families, and medical staff responsible for managing blood inventory and donation schedules. They require a centralized, reliable platform to optimize the matching process between donors and recipients and improve communication during emergencies. In the context of digital health transformation, DaiVietBlood provides a secure, accessible solution to address localized blood shortages.
 
 **Business and Technical Objectives:**
+
 Migrating the DaiVietBlood system from a local/on-premise environment to AWS offers superior advantages:
 
 - **Business:** AWS allows the application to scale flexibly according to the user base, reduces hardware infrastructure operational costs, and ensures consistent performance nationwide.
+-
 - **Technical:** AWS provides High Availability and medical data security. Adopting a **Serverless Architecture** (AWS Lambda, API Gateway, Cognito, RDS) simplifies backend management, accelerates development, and reduces maintenance costs. The system integrates comprehensive monitoring (CloudWatch) and adheres to strict security standards.
 
 **Summary of Key Use Cases:**
@@ -164,8 +167,6 @@ The project applies the Agile Scrum model over 8 weeks (4 Sprints):
 
 ### 3.2 OUT OF SCOPE
 
-Due to time and resource limitations of the MVP phase, the following items are not included:
-
 - Optimal user search algorithm based on real-time Geo-location (currently using simplified logic).
 - Complex Auto-scaling for the Database layer (currently using basic RDS).
 - Deep Latency Optimization for regions outside Singapore.
@@ -202,10 +203,6 @@ The following [Cost Estimation](https://calculator.aws/#/estimate?id=6f03c76acaa
 
 ---
 
-Dưới đây là nội dung mục **5. TEAM** đã được định dạng lại theo đúng cấu trúc bảng biểu trong tài liệu dự án của bạn:
-
----
-
 ### 5. TEAM
 
 **AWS FCJ Program Lead (Mentor)**
@@ -235,12 +232,6 @@ Dưới đây là nội dung mục **5. TEAM** đã được định dạng lạ
 | Name               | Title     | Role                                                | Email / Contact Info     |
 | :----------------- | :-------- | :-------------------------------------------------- | :----------------------- |
 | **Nguyễn Đức Lân** | Team Lead | Primary contact for project status and escalations. | lannguyen68609@gmail.com |
-
----
-
-Here is the **6. RESOURCES & COST ESTIMATES** section formatted professionally in both English and Vietnamese.
-
-I have adjusted the "Rate" column to reflect that this is an academic internship project (N/A or $0), and included a note explaining the cost efficiency.
 
 ---
 
@@ -280,16 +271,30 @@ I have adjusted the "Rate" column to reflect that this is an academic internship
 
 ---
 
-## 7. ACCEPTANCE
+### 7. ACCEPTANCE
 
-### 7.1 Submission of Deliverables:
+#### **7.1 Submission of Deliverables:**
 
-Upon completion of the "Handover" phase, the Skyline Team will submit all Source Code, Architecture Documentation, Admin Accounts, and Operations Manuals to the Customer/Mentor.
+Upon completion of the final phase ("Handover"), Skyline Team (PROVIDER) will submit the associated tangible Deliverables (Source Code, AWS Architecture Documentation, Admin Credentials, and Operational Manual) to the Project Stakeholders/Instructors (CUSTOMER). This submission will be accompanied by an Acceptance Form (or a formal Acceptance Email).
 
-### 7.2 Acceptance Period & Process:
+#### **7.2 Acceptance Period & Review:**
 
-The Customer has 05 business days to review and perform UAT. If the product meets the Success Criteria (Section 1.2), the Customer will sign the acceptance confirmation.
+Upon such submission, the Customer will review, evaluate, and perform User Acceptance Testing (UAT) on the applicable Deliverable(s) within five (5) business days (the “Acceptance Period”). The review will determine whether each Deliverable satisfies the Project Success Criteria (defined in Section 1.2) and adheres to the AWS Architecture (defined in Section 2.1) in all material respects.
 
-### 7.3 Defect Remediation:
+#### **7.3 Confirmation of Acceptance:**
 
-If critical errors arise or features are missing compared to the committed scope, the Skyline Team is responsible for fixing and resubmitting for acceptance as soon as possible.
+If the Deliverable satisfies its acceptance criteria, the Customer will furnish a written acceptance confirmation to the Provider via the Acceptance Form prior to the end of the Acceptance Period. This signature (or written confirmation) marks the official closure of the project.
+
+#### **7.4 Rejection & Remediation:**
+
+For a Deliverable that is not accepted due to a non-conformity (e.g., Critical bugs, Security vulnerabilities, or missing features compared to the Scope of Work), the Customer will indicate the detailed reasons for such rejection on the Acceptance Form (a “Rejection Notice”) within the Acceptance Period.
+
+Upon receipt of a Rejection Notice, the Provider will promptly correct any defects or non-conformities to the extent required. Thereafter, the Provider will resubmit the modified Deliverable to the Customer, and the acceptance process set forth above will be repeated.
+
+#### **7.5 Scope of Re-evaluation:**
+
+The Customer will limit its review of resubmitted Deliverables to determining whether or not the Provider has corrected the defects identified in the Rejection Notice and to the effects which these corrections have on other portions of the system.
+
+#### **7.6 Deemed Acceptance:**
+
+If the Customer fails to provide the Provider with the above-described Rejection Notice or signed Acceptance Form prior to the end of the applicable Acceptance Period, then the corresponding Deliverable(s) and the project as a whole are deemed accepted.
