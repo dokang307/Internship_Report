@@ -184,7 +184,9 @@ Do giới hạn về thời gian và tài nguyên của giai đoạn MVP, các h
 
 ## 4. BẢNG PHÂN TÍCH CHI PHÍ AWS DỰ KIẾN
 
-_Khu vực: Asia Pacific (Singapore)_
+Dưới đây là bản dịch tiếng Việt, giữ nguyên định dạng liên kết:
+
+[Bảng Ước tính Chi phí](https://calculator.aws/#/estimate?id=6f03c76acaabcf7f7d55ccb27d6c2600a04ad472) dưới đây được tính toán dựa trên khu vực _Châu Á Thái Bình Dương (Singapore)_, đây là khu vực tiêu chuẩn để đảm bảo độ trễ thấp nhất cho các truy cập từ Việt Nam.
 
 | Hạng mục      | Dịch vụ      | Cấu hình ước tính                                             | Chi phí tháng (USD)  |
 | :------------ | :----------- | :------------------------------------------------------------ | :------------------- |
@@ -202,29 +204,71 @@ _Khu vực: Asia Pacific (Singapore)_
 
 ---
 
-## 5. ĐỘI NGŨ THỰC HIỆN
+### 5. ĐỘI NGŨ DỰ ÁN (TEAM)
 
-- **Mentor (AWS FCJ):** Nguyễn Gia Hưng - Head of Solutions Architect.
-- **Quản lý Dự án (PM):** Nguyễn Đức Lân - Điều phối, quản lý tiến độ, tối ưu chi phí và chiến lược UAT.
-- **Technical Lead:** Nguyễn Công Minh - Phụ trách CI/CD, Infrastructure (CDK), Bảo mật và Lambda.
-- **Solution Architect:** Đỗ Khang - Thiết kế kiến trúc Serverless, tích hợp AI Chatbot, Chính sách dịch vụ.
-- **Fullstack Developer:** Lê Hoàng Anh - Phát triển API, UI/UX Frontend và bảo mật ứng dụng.
-- **Data Engineer:** Nguyễn Quách Lam Giang - Quản trị RDS, thiết kế VPC/Subnet và giám sát CloudWatch.
+**Cố vấn Chương trình AWS FCJ (AWS FCJ Program Lead)**
+
+| Họ tên              | Chức danh                                                     | Mô tả                                                                                                  | Email / Thông tin liên hệ |
+| :------------------ | :------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------- | :------------------------ |
+| **Nguyễn Gia Hưng** | Trưởng nhóm Kiến trúc Giải pháp (Head of Solutions Architect) | Cung cấp hướng dẫn kỹ thuật, đánh giá kiến trúc và tư vấn các phương pháp thực hành tốt nhất trên AWS. | hunggia@amazon.com        |
+
+**Các bên liên quan của Dự án (Project Stakeholders)**
+
+| Nhóm                | Chức danh               | Vai trò liên quan                                                | Email / Thông tin liên hệ |
+| :------------------ | :---------------------- | :--------------------------------------------------------------- | :------------------------ |
+| **AWS FCJ Mentors** | Giảng viên Chương trình | Giám sát học thuật, đánh giá dự án và xác nhận tín chỉ thực tập. |                           |
+
+**Nhóm Thực tập (Đại học FPT)**
+
+| Họ tên                     | Chức danh                   | Vai trò & Trách nhiệm                                                                                                                                                                    | Email / Thông tin liên hệ    |
+| :------------------------- | :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------- |
+| **Nguyễn Đức Lân**         | Đồng Trưởng nhóm (PM)       | **Quản lý Dự án:** Chịu trách nhiệm điều phối nhóm và theo dõi tiến độ. Dẫn dắt cấu trúc mã nguồn, lập kế hoạch UAT và Tối ưu hóa chi phí. Hoàn thiện thiết kế kiến trúc AWS serverless. | lannguyen68609@gmail.com     |
+| **Nguyễn Công Minh**       | Đồng Trưởng nhóm (Kỹ thuật) | **Lập trình viên (DevOps & Backend):** Triển khai CI/CD, CodePipeline, CDK Stack và AWS Lambda.                                                                                          | minhncse182968@fpt.edu.vn    |
+| **Đỗ Khang**               | Thành viên                  | **Kiến trúc sư Đám mây:** Thiết kế Kiến trúc tổng thể, Chính sách Dịch vụ (Service Policy), đồng thiết kế kiến trúc AWS serverless.                                                      | dokhang307@gmail.com         |
+| **Lê Hoàng Anh**           | Thành viên                  | **Lập trình viên (Fullstack):** Phát triển API, thiết kế giao diện UI/UX và cấu hình Bảo mật.                                                                                            | anhlhse170327@fpt.edu.vn     |
+| **Nguyễn Quách Lam Giang** | Thành viên                  | **Kỹ sư Dữ liệu:** Quản trị RDS (MySQL), thiết lập kết nối Database, cấu hình mạng VPC và Subnet.                                                                                        | nguyenlamgiang2198@gmail.com |
+
+**Đầu mối liên hệ xử lý sự cố (Project Escalation Contact)**
+
+| Họ tên             | Chức danh   | Vai trò                                                                  | Email / Thông tin liên hệ |
+| :----------------- | :---------- | :----------------------------------------------------------------------- | :------------------------ |
+| **Nguyễn Đức Lân** | Trưởng nhóm | Đầu mối liên hệ chính về tình trạng dự án và xử lý các vấn đề phát sinh. | lannguyen68609@gmail.com  |
 
 ---
 
-## 6. NGUỒN LỰC & ƯỚC TÍNH CHI PHÍ NHÂN SỰ
+#### 6. NGUỒN LỰC & ƯỚC TÍNH CHI PHÍ
 
-**Phân bổ thời gian (Giờ công):**
-Dự án huy động tổng cộng **750 giờ công** chia đều cho 5 thành viên qua các giai đoạn: Nền tảng, Phát triển Core, Phân tích dữ liệu, Kiểm thử và Bàn giao.
+**Phân bổ Nguồn lực (Resource Breakdown)**
 
-**Phân bổ chi phí:**
+| Nguồn lực                  | Trách nhiệm                                                                                                                                                               |
+| :------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Nguyễn Đức Lân**         | **Điều phối & PM:** Quản lý dự án, Tối ưu hóa chi phí, Phân tích Forensics, Cấu hình hệ thống và hỗ trợ lập trình Full-stack.                                             |
+| **Nguyễn Công Minh**       | **DevOps & Hạ tầng:** Quy trình CI/CD, Bảo mật, CDK Stack, Triển khai Lambda, Đồng thiết kế cấu trúc API, Hạ tầng hệ thống.                                               |
+| **Lê Hoàng Anh**           | **Frontend & UI/UX:** Phát triển Frontend, Tích hợp API, Thiết kế UI/UX, Bảo mật ứng dụng.                                                                                |
+| **Nguyễn Quách Lam Giang** | **Kỹ thuật Dữ liệu:** Phân tích dữ liệu, Kết nối RDS với MySQL, Khởi tạo VPC, Giám sát CloudWatch, Cấu hình luồng Subnet và NAT Gateway.                                  |
+| **Đỗ Khang**               | **Kiến trúc Đám mây:** Thiết kế kiến trúc, Các chính sách dịch vụ (Service Policies), Tài liệu hóa, Đồng thiết kế cấu trúc API, Tích hợp AI Chatbot, Giám sát CloudWatch. |
 
-- **Nhân sự:** $0 (Do sinh viên thực hiện trong khuôn khổ thực tập/đồ án, tính vào tín chỉ học thuật).
-- **Hạ tầng AWS:** ~$15 (Chi phí thực tế phát sinh trong quá trình dev/test sau khi trừ Credit).
-- **Tổng chi phí dự án:** Rất tối ưu, chủ yếu dựa trên nguồn lực nội bộ và hỗ trợ từ chương trình AWS FCJ.
+**Giờ làm việc theo Giai đoạn Dự án**
 
----
+| Giai đoạn Dự án               | N.Đ. Lân | N.C. Minh | L.H. Anh | N.Q.L. Giang | Đ. Khang | Tổng số giờ |
+| :---------------------------- | :------: | :-------: | :------: | :----------: | :------: | :---------: |
+| **Nền tảng (Foundation)**     |    30    |    30     |    30    |      30      |    30    |   **150**   |
+| **Điều phối Cốt lõi**         |    30    |    30     |    30    |      30      |    30    |   **150**   |
+| **Lớp Phân tích (Analytics)** |    30    |    30     |    30    |      30      |    30    |   **150**   |
+| **Kiểm thử & Xác thực**       |    30    |    30     |    30    |      30      |    30    |   **150**   |
+| **Tài liệu & Bàn giao**       |    30    |    30     |    30    |      30      |    30    |   **150**   |
+| **Tổng số giờ**               | **150**  |  **150**  | **150**  |   **150**    | **150**  |   **750**   |
+
+**Phân bổ Chi phí**
+
+| Bên tham gia             | Đóng góp (USD)                       | Tỷ lệ % trên Tổng số |
+| :----------------------- | :----------------------------------- | :------------------- |
+| **Chương trình AWS FCJ** | $0 (Thực tập phi lợi nhuận)          | 0%                   |
+| **Đại học FPT**          | Nhân lực sinh viên (Tín chỉ học tập) | 0%                   |
+| **Hạ tầng AWS**          | ~$15.00 (Chi phí chạy thử nghiệm)    | 100%                 |
+| **Tổng chi phí Dự án**   | **~$15.00**                          | **100%**             |
+
+**\*Ghi chú về Hiệu quả Chi phí:** Chi phí nhân lực cho dự án này được hỗ trợ như một phần của kỳ Thực tập tại Đại học FPT và chương trình AWS First Cloud Journey (FCJ). Khoản ước tính $15 đại diện cho chi phí vận hành hạ tầng (Sử dụng AWS Credits) cần thiết cho các môi trường phát triển và kiểm thử.
 
 ## 7. NGHIỆM THU
 

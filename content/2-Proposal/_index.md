@@ -162,7 +162,7 @@ The project applies the Agile Scrum model over 8 weeks (4 Sprints):
 | **Testing & Go-live**         | Week 11   | UAT, Security Testing, Performance Optimization.                      | UAT Report, Security Report.                   | 5                   |
 | **Handover & Training**       | Week 12   | Transfer accounts, operations training, handover documentation.       | Operations Manual, Acceptance.                 | 5                   |
 
-### 3.2 OUT OF SCOPE 
+### 3.2 OUT OF SCOPE
 
 Due to time and resource limitations of the MVP phase, the following items are not included:
 
@@ -184,7 +184,7 @@ To upgrade from the current MVP to a large-scale Production system, the followin
 
 ## 4. EXPECTED AWS COST BREAKDOWN
 
-_Region: Asia Pacific (Singapore)_
+The following [Cost Estimation](https://calculator.aws/#/estimate?id=6f03c76acaabcf7f7d55ccb27d6c2600a04ad472) is based on the _Asia Pacific (Singapore) region_, which is the standard region for low latency access from Vietnam.
 
 | Category     | Service      | Estimated Configuration                                       | Monthly Cost (USD)   |
 | :----------- | :----------- | :------------------------------------------------------------ | :------------------- |
@@ -202,27 +202,81 @@ _Region: Asia Pacific (Singapore)_
 
 ---
 
-## 5. IMPLEMENTATION TEAM
-
-- **Mentor (AWS FCJ):** Nguyen Gia Hung - Head of Solutions Architect.
-- **Project Manager (PM):** Nguyen Duc Lan - Coordination, schedule management, cost optimization, and UAT strategy.
-- **Technical Lead:** Nguyen Cong Minh - In charge of CI/CD, Infrastructure (CDK), Security, and Lambda.
-- **Solution Architect:** Do Khang - Serverless architecture design, AI Chatbot integration, Service Policies.
-- **Fullstack Developer:** Le Hoang Anh - API development, Frontend UI/UX, and application security.
-- **Data Engineer:** Nguyen Quach Lam Giang - RDS administration, VPC/Subnet design, and CloudWatch monitoring.
+Dưới đây là nội dung mục **5. TEAM** đã được định dạng lại theo đúng cấu trúc bảng biểu trong tài liệu dự án của bạn:
 
 ---
 
-## 6. RESOURCES & ESTIMATED PERSONNEL COSTS
+### 5. TEAM
 
-**Time Allocation (Man-hours):**
-The project mobilizes a total of **750 man-hours** distributed equally among 5 members across phases: Foundation, Core Development, Data Analysis, Testing, and Handover.
+**AWS FCJ Program Lead (Mentor)**
 
-**Cost Allocation:**
+| Name                | Title                       | Description                                                                          | Email / Contact Info |
+| :------------------ | :-------------------------- | :----------------------------------------------------------------------------------- | :------------------- |
+| **Nguyễn Gia Hưng** | Head of Solutions Architect | Provides technical mentorship, architecture review, and AWS best practices guidance. | hunggia@amazon.com   |
 
-- **Personnel:** $0 (Performed by students as part of an internship/capstone project, counted towards academic credits).
-- **AWS Infrastructure:** ~$15 (Actual costs incurred during dev/test after deducting Credits).
-- **Total Project Cost:** Highly optimized, relying mainly on internal resources and support from the AWS FCJ program.
+**Project Stakeholders**
+
+| Name                | Title              | Stakeholder for                                            | Email / Contact Info |
+| :------------------ | :----------------- | :--------------------------------------------------------- | :------------------- |
+| **AWS FCJ Mentors** | Program Instructor | Academic oversight, project evaluation, internship credit. | [N/A]                |
+
+**Internship Team (FPT University)**
+
+| Name                       | Title               | Role                                                                                                                   | Email / Contact Info         |
+| :------------------------- | :------------------ | :--------------------------------------------------------------------------------------------------------------------- | :--------------------------- |
+| **Nguyễn Đức Lân**         | Co-Lead (PM)        | **Project Manager:** Responsible for team coordination, progress tracking, code structure, UAT, and Cost Optimization. | lannguyen68609@gmail.com     |
+| **Nguyễn Công Minh**       | Co-Lead (Technical) | **DevOps & Backend:** CI/CD, CodePipeline, CDK Stack, Lambda implementation.                                           | minhncse182968@fpt.edu.vn    |
+| **Đỗ Khang**               | Member              | **Cloud Architect:** Architect Design, Service Policy, Co-designed AWS serverless architecture.                        | dokhang307@gmail.com         |
+| **Lê Hoàng Anh**           | Member              | **Fullstack Dev:** API implementation, UI/UX design, Security configurations.                                          | anhlhse170327@fpt.edu.vn     |
+| **Nguyễn Quách Lam Giang** | Member              | **Data Engineering:** RDS with MySQL connection, VPC & Subnet configuration.                                           | nguyenlamgiang2198@gmail.com |
+
+**Project Escalation Contacts**
+
+| Name               | Title     | Role                                                | Email / Contact Info     |
+| :----------------- | :-------- | :-------------------------------------------------- | :----------------------- |
+| **Nguyễn Đức Lân** | Team Lead | Primary contact for project status and escalations. | lannguyen68609@gmail.com |
+
+---
+
+Here is the **6. RESOURCES & COST ESTIMATES** section formatted professionally in both English and Vietnamese.
+
+I have adjusted the "Rate" column to reflect that this is an academic internship project (N/A or $0), and included a note explaining the cost efficiency.
+
+---
+
+#### 6. RESOURCES & COST ESTIMATES
+
+**Resource Breakdown**
+
+| Resource                   | Responsibility                                                                                                                                         |
+| :------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nguyễn Đức Lân**         | **Coordination & PM:** Project Management, Cost Optimization, Forensic analysis, System configuration, and Full-stack development support.             |
+| **Nguyễn Công Minh**       | **DevOps & Infrastructure:** CI/CD pipeline, Security, CDK Stack, Lambda implementation, Co-design API structure, System infrastructure.               |
+| **Lê Hoàng Anh**           | **Frontend & UI/UX:** Frontend development, API Integration, UI/UX Design, Application Security.                                                       |
+| **Nguyễn Quách Lam Giang** | **Data Engineering:** Data Analysis, RDS to MySQL connection, VPC creation, CloudWatch monitoring, Subnet and NAT Gateway configuration.               |
+| **Đỗ Khang**               | **Cloud Architecture:** Architecture design, Service Policies, Documentation, API structure co-design, AI Chatbot integrations, CloudWatch monitoring. |
+
+**Hours by Project Phase**
+
+| Project Phase                | N.Đ. Lân | N.C. Minh | L.H. Anh | N.Q.L. Giang | Đ. Khang | Total Hours |
+| :--------------------------- | :------: | :-------: | :------: | :----------: | :------: | :---------: |
+| **Foundation**               |    30    |    30     |    30    |      30      |    30    |   **150**   |
+| **Core Orchestration**       |    30    |    30     |    30    |      30      |    30    |   **150**   |
+| **Analytics Layer**          |    30    |    30     |    30    |      30      |    30    |   **150**   |
+| **Testing & Validation**     |    30    |    30     |    30    |      30      |    30    |   **150**   |
+| **Documentation & Handover** |    30    |    30     |    30    |      30      |    30    |   **150**   |
+| **Total Hours**              | **150**  |  **150**  | **150**  |   **150**    | **150**  |   **750**   |
+
+**Cost Distribution**
+
+| Party                  | Contribution (USD)                | % Contribution of Total |
+| :--------------------- | :-------------------------------- | :---------------------- |
+| **AWS FCJ Program**    | $0 (Non-profit internship)        | 0%                      |
+| **FPT University**     | Student labor (Academic Credit)   | 0%                      |
+| **AWS Infrastructure** | ~$15.00 (Testing & Running Costs) | 100%                    |
+| **Total Project Cost** | **~$15.00**                       | **100%**                |
+
+**\*Note on Cost Efficiency:** The labor cost for this project is subsidized as part of the FPT University Internship and AWS First Cloud Journey (FCJ) program. The estimated $15 represents the infrastructure running costs (AWS Credits) required for development and testing environments.
 
 ---
 
