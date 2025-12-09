@@ -1,0 +1,294 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.134.3"><meta name=description content><meta name=author content="thienlh@thienlu.com"><link rel=icon href=../../images/favicon.png type=image/png><title>Blog 2 :: Internship Report</title>
+<link href=../../css/nucleus.css?1765293420 rel=stylesheet><link href=../../css/fontawesome-all.min.css?1765293420 rel=stylesheet><link href=../../css/hybrid.css?1765293420 rel=stylesheet><link href=../../css/featherlight.min.css?1765293420 rel=stylesheet><link href=../../css/perfect-scrollbar.min.css?1765293420 rel=stylesheet><link href=../../css/auto-complete.css?1765293420 rel=stylesheet><link href=../../css/atom-one-dark-reasonable.css?1765293420 rel=stylesheet><link href=../../css/theme.css?1765293420 rel=stylesheet><link href=../../css/hugo-theme.css?1765293420 rel=stylesheet><link href=../../css/theme-workshop.css?1765293420 rel=stylesheet><script src=../../js/jquery-3.3.1.min.js?1765293420></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=../../3-blogstranslated/3.2-blog2/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=../../><svg id="Layer_1" data-name="Layer 1" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff}.cls-2{fill:#f90;fill-rule:evenodd}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09 10.85a4.7 4.7.0 00.19 1.48 7.73 7.73.0 00.54 1.19.77.77.0 01.12.38.64.64.0 01-.32.49l-1 .7a.83.83.0 01-.44.15.69.69.0 01-.49-.23 3.8 3.8.0 01-.6-.77q-.25-.42-.51-1a6.14 6.14.0 01-4.89 2.3 4.54 4.54.0 01-3.32-1.19 4.27 4.27.0 01-1.22-3.2 4.28 4.28.0 011.46-3.4A6.06 6.06.0 017.69 6.46a12.47 12.47.0 011.76.13q.92.13 1.91.36V5.73a3.65 3.65.0 00-.79-2.66A3.81 3.81.0 007.86 2.3a7.71 7.71.0 00-1.79.22 12.78 12.78.0 00-1.79.57 4.55 4.55.0 01-.58.22h-.26q-.35.0-.35-.52V2a1.09 1.09.0 01.12-.58 1.2 1.2.0 01.47-.35A10.88 10.88.0 015.77.32 10.19 10.19.0 018.36.0a6 6 0 014.35 1.35 5.49 5.49.0 011.38 4.09zM7.34 13.38a5.36 5.36.0 001.72-.31A3.63 3.63.0 0010.63 12 2.62 2.62.0 0011.19 11a5.63 5.63.0 00.16-1.44v-.7a14.35 14.35.0 00-1.53-.28 12.37 12.37.0 00-1.56-.1 3.84 3.84.0 00-2.47.67A2.34 2.34.0 005 11a2.35 2.35.0 00.61 1.76A2.4 2.4.0 007.34 13.38zm13.35 1.8a1 1 0 01-.64-.16 1.3 1.3.0 01-.35-.65L15.81 1.51a3 3 0 01-.15-.67.36.36.0 01.41-.41H17.7a1 1 0 01.65.16 1.4 1.4.0 01.33.65l2.79 11 2.59-11A1.17 1.17.0 0124.39.6a1.1 1.1.0 01.67-.16H26.4a1.1 1.1.0 01.67.16 1.17 1.17.0 01.32.65L30 12.39 32.88 1.25A1.39 1.39.0 0133.22.6a1 1 0 01.65-.16h1.54a.36.36.0 01.41.41 1.36 1.36.0 010 .26 3.64 3.64.0 01-.12.41l-4 12.86a1.3 1.3.0 01-.35.65 1 1 0 01-.64.16H29.25a1 1 0 01-.67-.17 1.26 1.26.0 01-.32-.67L25.67 3.64l-2.56 10.7a1.26 1.26.0 01-.32.67 1 1 0 01-.67.17zm21.36.44a11.28 11.28.0 01-2.56-.29 7.44 7.44.0 01-1.92-.67 1 1 0 01-.61-.93v-.84q0-.52.38-.52a.9.9.0 01.31.06l.42.17a8.77 8.77.0 001.83.58 9.78 9.78.0 002 .2 4.48 4.48.0 002.43-.55 1.76 1.76.0 00.86-1.57 1.61 1.61.0 00-.45-1.16A4.29 4.29.0 0043 9.22l-2.41-.76A5.15 5.15.0 0138 6.78a3.94 3.94.0 01-.83-2.41 3.7 3.7.0 01.45-1.85 4.47 4.47.0 011.19-1.37 5.27 5.27.0 011.7-.86A7.4 7.4.0 0142.6.0a8.87 8.87.0 011.12.07q.57.07 1.08.19t.95.26a4.27 4.27.0 01.7.29 1.59 1.59.0 01.49.41.94.94.0 01.15.55v.79q0 .52-.38.52a1.76 1.76.0 01-.64-.2 7.74 7.74.0 00-3.2-.64 4.37 4.37.0 00-2.21.47 1.6 1.6.0 00-.79 1.48 1.58 1.58.0 00.49 1.18 4.94 4.94.0 001.83.92L44.55 7a5.08 5.08.0 012.57 1.6A3.76 3.76.0 0147.9 11a4.21 4.21.0 01-.44 1.93 4.4 4.4.0 01-1.21 1.47 5.43 5.43.0 01-1.85.93A8.25 8.25.0 0142.05 15.62z"/><path class="cls-2" d="M45.19 23.81C39.72 27.85 31.78 30 25 30A36.64 36.64.0 01.22 20.57c-.51-.46-.06-1.09.56-.74A49.78 49.78.0 0025.53 26.4 49.23 49.23.0 0044.4 22.53C45.32 22.14 46.1 23.14 45.19 23.81z"/><path class="cls-2" d="M47.47 21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74 3.13-2.2 8.27-1.57 8.86-.83s-.16 5.89-3.09 8.35c-.45.38-.88.18-.68-.32C46.69 25.8 48.17 22.11 47.47 21.21z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=../../js/lunr.min.js?1765293420></script><script type=text/javascript src=../../js/auto-complete.js?1765293420></script><script type=text/javascript>var baseurl="https://dokang307.github.io/Internship_Report/"</script><script type=text/javascript src=../../js/search.js?1765293420></script></div><div class=highlightable><ul class=topics><li data-nav-id=/1-worklog/ title=Worklog class=dd-item><a href=../../1-worklog/><b>1. </b>Worklog
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/1-worklog/1.1-week1/ title="Week 1 Worklog" class=dd-item><a href=../../1-worklog/1.1-week1/><b>1.1. </b>Week 1 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.2-week2/ title="Week 2 Worklog" class=dd-item><a href=../../1-worklog/1.2-week2/><b>1.2. </b>Week 2 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.3-week3/ title="Week 3 Worklog" class=dd-item><a href=../../1-worklog/1.3-week3/><b>1.3. </b>Week 3 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.4-week4/ title="Week 4 Worklog" class=dd-item><a href=../../1-worklog/1.4-week4/><b>1.4. </b>Week 4 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.5-week5/ title="Week 5 Worklog" class=dd-item><a href=../../1-worklog/1.5-week5/><b>1.5. </b>Week 5 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.6-week6/ title="Week 6 Worklog" class=dd-item><a href=../../1-worklog/1.6-week6/><b>1.6. </b>Week 6 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.7-week7/ title="Week 7 Worklog" class=dd-item><a href=../../1-worklog/1.7-week7/><b>1.7. </b>Week 7 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.8-week8/ title="Week 8 Worklog" class=dd-item><a href=../../1-worklog/1.8-week8/><b>1.8. </b>Week 8 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.9-week9/ title="Week 9 Worklog" class=dd-item><a href=../../1-worklog/1.9-week9/><b>1.9. </b>Week 9 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.10-week10/ title="Week 10 Worklog" class=dd-item><a href=../../1-worklog/1.10-week10/><b>1.10. </b>Week 10 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.11-week11/ title="Week 11 Worklog" class=dd-item><a href=../../1-worklog/1.11-week11/><b>1.11. </b>Week 11 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.12-week12/ title="Week 12 Worklog" class=dd-item><a href=../../1-worklog/1.12-week12/><b>1.12. </b>Week 12 Worklog
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/2-proposal/ title=Proposal class=dd-item><a href=../../2-proposal/><b>2. </b>Proposal
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/ title="Translated Blogs" class="dd-item
+parent"><a href=../../3-blogstranslated/><b>3. </b>Translated Blogs
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/3-blogstranslated/3.1-blog1/ title="Blog 1" class=dd-item><a href=../../3-blogstranslated/3.1-blog1/><b>3.1. </b>Blog 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/3.2-blog2/ title="Blog 2" class="dd-item
+active"><a href=../../3-blogstranslated/3.2-blog2/><b>3.2. </b>Blog 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/3.3-blog3/ title="Blog 3" class=dd-item><a href=../../3-blogstranslated/3.3-blog3/><b>3.2. </b>Blog 3
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/4-eventparticipated/ title="Events Participated" class=dd-item><a href=../../4-eventparticipated/><b>4. </b>Events Participated
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/4-eventparticipated/4.1-event1/ title="Event 1" class=dd-item><a href=../../4-eventparticipated/4.1-event1/><b>4.1. </b>Event 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-eventparticipated/4.2-event2/ title="Event 2" class=dd-item><a href=../../4-eventparticipated/4.2-event2/><b>4.2. </b>Event 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-eventparticipated/4.3-event3/ title="Event 3" class=dd-item><a href=../../4-eventparticipated/4.3-event3/><b>4.3. </b>Event 3
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-eventparticipated/4.4-event4/ title="Event 4" class=dd-item><a href=../../4-eventparticipated/4.4-event4/><b>4.4. </b>Event 4
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-eventparticipated/4.5-event5/ title="Event 5" class=dd-item><a href=../../4-eventparticipated/4.5-event5/><b>4.5. </b>Event 5
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-eventparticipated/4.6-event6/ title="Event 6" class=dd-item><a href=../../4-eventparticipated/4.6-event6/><b>4.6. </b>Event 6
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/5-workshop/ title=Workshop class=dd-item><a href=../../5-workshop/><b>5. </b>Workshop
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/5-workshop/5.1-workshop-overview/ title="Workshop Overview" class=dd-item><a href=../../5-workshop/5.1-workshop-overview/><b>5.1. </b>Workshop Overview
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.2-prerequiste/ title=Preparation class=dd-item><a href=../../5-workshop/5.2-prerequiste/><b>5.2. </b>Preparation
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.3-s3-vpc/ title="VPC & Amazon RDS" class=dd-item><a href=../../5-workshop/5.3-s3-vpc/><b>5.3. </b>VPC & Amazon RDS
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/ title="Create VPC" class=dd-item><a href=../../5-workshop/5.3-s3-vpc/5.3.1-create-gwe/><b>5.3.1. </b>Create VPC
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/ title="Create Amazon RDS" class=dd-item><a href=../../5-workshop/5.3-s3-vpc/5.3.2-test-gwe/><b>5.3.2. </b>Create Amazon RDS
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/5-workshop/5.4-s3-onprem/ title="Lambda & API Gateway" class=dd-item><a href=../../5-workshop/5.4-s3-onprem/><b>5.4. </b>Lambda & API Gateway
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/5-workshop/5.4-s3-onprem/5.4.1-prepare/ title="Create Lambda Functions" class=dd-item><a href=../../5-workshop/5.4-s3-onprem/5.4.1-prepare/><b>5.4.1. </b>Create Lambda Functions
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/ title="Create API Gateway" class=dd-item><a href=../../5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/><b>5.4.2. </b>Create API Gateway
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/ title="Test API Endpoints" class=dd-item><a href=../../5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/><b>5.4.3. </b>Test API Endpoints
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/ title="Configure CORS & Security" class=dd-item><a href=../../5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/><b>5.4.4. </b>Configure CORS & Security
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/5-workshop/5.5-policy/ title="S3, CloudFront & Amplify" class=dd-item><a href=../../5-workshop/5.5-policy/><b>5.5. </b>S3, CloudFront & Amplify
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.6-cleanup/ title="CI/CD, CloudWatch & Cleanup" class=dd-item><a href=../../5-workshop/5.6-cleanup/><b>5.6. </b>CI/CD, CloudWatch & Cleanup
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/6-self-evaluation/ title=Self-Assessment class=dd-item><a href=../../6-self-evaluation/><b>6. </b>Self-Assessment
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/7-feedback/ title="Sharing and Feedback" class=dd-item><a href=../../7-feedback/><b>7. </b>Sharing and Feedback
+<i class="fas fa-check read-icon"></i></a></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://www.facebook.com/groups/awsstudygroupfcj/><i class='fab fa-facebook'></i> AWS Study Group</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value"><option id=en value=https://dokang307.github.io/Internship_Report/3-blogstranslated/3.2-blog2/ selected>English</option><option id=vi value=https://dokang307.github.io/Internship_Report/vi/3-blogstranslated/3.2-blog2/>Tiếng Việt</option></select><svg id="Capa_1" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li></ul></section><section id=footer><left><b>Workshop</b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title=Migrate alt="web counter" border=0></a><br><b><a href=https://cloudjourney.awsstudygroup.com/>Cloud Journey</a></b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" alt="web counter" border=0>
+</left><left><br><br><b>Last Updated</b><br><i><span id=lastUpdated style=color:orange></span>
+</i><script>const today=new Date,formattedDate=today.toLocaleDateString("en-GB");document.getElementById("lastUpdated").textContent=formattedDate</script></left><left><br><br><b>Team</b><br><i><a href=https://www.facebook.com/groups/660548818043427 style=color:orange>First Cloud Journey</a><br></i></left><script async defer src=https://buttons.github.io/buttons.js></script></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i>
+</a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links><a href=../../>Internship Report</a> > <a href=../../3-blogstranslated/>Translated Blogs</a> > Blog 2</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#introduction>Introduction</a></li><li><a href=#use-case-3-planned-maintenance-events-for-sap>Use-case 3: Planned Maintenance Events for SAP</a></li><li><a href=#use-case-4-accelerate-root-cause-analysis-for-sap>Use-case 4: Accelerate Root-Cause Analysis for SAP</a></li><li><a href=#cost-considerations>Cost Considerations</a></li><li><a href=#conclusion>Conclusion</a></li><li><a href=#join-the-sap-on-aws-discussion>Join the SAP on AWS Discussion</a></li><li><a href=#acknowledgments>Acknowledgments</a></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Blog 2</h1><div class="notices warning"><p>⚠️ <strong>Note:</strong> The information below is for reference purposes only, please <strong>do not copy verbatim</strong> for your report, including this warning.</p></div><h1 id=streamlining-sap-operations-with-cloudwatch-mcp-server-and-amazon-q-cli--part-4>Streamlining SAP Operations with CloudWatch MCP Server and Amazon Q CLI – Part 4</h1><p>by Ferry Mulyadi and Vijay Sitaram | AUGUST 12, 2025 | in <a href=https://aws.amazon.com/blogs/awsforsap/category/management-tools/amazon-cloudwatch/>Amazon CloudWatch</a>, <a href=https://aws.amazon.com/blogs/awsforsap/category/amazon-q/>Amazon Q</a>, <a href=https://aws.amazon.com/blogs/awsforsap/category/management-tools/aws-systems-manager/>AWS Systems Manager</a>, <a href=https://aws.amazon.com/blogs/awsforsap/category/aws-well-architected/>AWS Well-Architected</a>, <a href=https://aws.amazon.com/blogs/awsforsap/category/how-to/>How-To</a>, <a href=https://aws.amazon.com/blogs/awsforsap/category/sap/>SAP on AWS</a>, <a href=https://aws.amazon.com/blogs/awsforsap/category/post-types/technical-how-to/>Technical How-to</a>, <a href=https://aws.amazon.com/blogs/awsforsap/category/post-types/thought-leadership/>Thought Leadership</a> | <a href=https://aws.amazon.com/blogs/awsforsap/streamline-sap-operation-with-cloudwatch-mcp-server-and-amazon-q-cli-part-4/>Permalink</a> | <a href=https://aws.amazon.com/blogs/awsforsap/streamline-sap-operation-with-cloudwatch-mcp-server-and-amazon-q-cli-part-4/>Share</a></p><h2 id=introduction>Introduction</h2><p>Optimizing SAP operations on AWS requires effective monitoring, troubleshooting, and maintenance capabilities. Continuing our previous discussions on Amazon CloudWatch Application Insights in <a href=https://aws.amazon.com/blogs/awsforsap/improve-your-sap-business-process-resilience-with-amazon-cloudwatch-application-insights/>Part 1</a>, how we used CloudWatch Application Insights to monitor SAP High Availability in <a href=https://aws.amazon.com/blogs/awsforsap/enhance-your-business-process-resilience-with-amazon-cloudwatch-application-insights-observability-for-sap-high-availability-part-2/>Part 2</a>, and <a href=https://github.com/awslabs/mcp>Amazon CloudWatch Model Context Protocol (MCP) Server</a> combined with <a href=https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html>Amazon Q for command line (Q CLI)</a> in <a href=https://aws.amazon.com/blogs/awsforsap/streamline-sap-operation-with-cloudwatch-mcp-server-and-amazon-q-cli-part-3/>Part 3</a>, this fourth article illustrates advanced real-world applications of these tools.</p><p>We will explore how this integration streamlines SAP maintenance planning and accelerates root cause analysis through practical use cases.</p><p>Through detailed examples, we will demonstrate how CloudWatch MCP Server and Q CLI work together to:</p><ul><li>Orchestrate planned maintenance events with minimal disruption.</li><li>Accelerate issue diagnosis through intelligent log analysis.</li><li>Provide context-aware recommendations for SAP operations.</li><li>Reduce Mean Time To Resolution (MTTR) for SAP incidents.</li></ul><hr><h2 id=use-case-3-planned-maintenance-events-for-sap>Use-case 3: Planned Maintenance Events for SAP</h2><p>In this case, we will execute a planned maintenance event within an SAP application cluster. Workflow integration allows engineering teams to diagnose issues without disruptive context switching, by viewing CloudWatch metrics directly within the IDE while using Q CLI to generate precise remediation commands.</p><p>In this scenario, Q CLI generated the following task list:</p><ol><li>Prompt to check the status of the App Server.</li><li>Run <code>aws ec2 describe-instances</code> to check the SAP cluster status.</li><li>Run <code>ssm crm_mon</code> command to check the ASCS and ERS cluster.</li><li>Run <code>ssm ps</code> command to get the process status of ASCS and ERS.</li><li>Run <code>ssm sapcontrol</code> command to get the process list.</li><li>Run <code>ssm</code> command to check <code>pacemaker.log</code>.</li><li>Run <code>ssm crm</code> command to check cluster resource status, constraints, and configuration.</li><li>Summarize that ERS is disabled due to cluster misconfiguration.</li><li>After prompt to check CloudWatch logs:<ul><li>Run <code>describe_log_groups</code>.</li><li>Run <code>analyze_log_groups</code>.</li><li>Run search <code>execute_log_insights_query</code> related to ASCS and ERS.</li><li>Run search <code>execute_log_insights_query</code> related to current ERS issues.</li><li>Summarize all log entries related to the ERS issue.</li></ul></li><li>After prompt to start the SAP ERS service:<ul><li>Run <code>ssm crm</code> command to check cluster resource status.</li><li>Run <code>ssm crm</code> command to enable the ERS resource (failed as expected).</li><li>Run <code>ssm</code> command to update resource configuration.</li><li>Run <code>ssm crm</code> command to re-enable the ERS resource (after fixing configuration).</li><li>Run <code>ssm sapcontrol</code> command to get the ASCS and ERS process list.</li><li>Summarize that the ERS service has been started successfully.</li></ul></li></ol><blockquote><p><strong>Important Note:</strong> The prompts and responses below have been abbreviated. You can download the <a href=https://d2908q01vomqb2.cloudfront.net/17ba0791499db908433b80f37c5fbc89b870084b/2025/07/17/Use-case-3-Planned-maintenance-events-for-SAP.pdf>Use-case 3 – Planned maintenance events for SAP</a> document to view the full prompts and responses from Q CLI.</p></blockquote><p><strong>Prompt: Check the status of the SAP ASCS/ERS cluster for the SAPDemo SAP application without restarting any services.</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>&gt; I&#39;ll check the status of the SAP ASCS/ERS cluster for the SAPDemo SAP application without restarting any services.
+</span></span><span style=display:flex><span>🛠️  Using tool: execute_bash (trusted)
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ● I will run the following shell command:
+</span></span><span style=display:flex><span>aws ec2 describe-instances --filters &#34;Name=tag:Name,Values=*SAP-FIS-CS*&#34; --query &#34;Reservations[*].Instances[*].[InstanceId,Tags[?Key==&#39;Name&#39;].Value|[0],State.Name,InstanceType,PrivateIpAddress]&#34; --output table
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ↳ Purpose: Checking EC2 instances that are part of the SAP cluster
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>-------------------------------------------------------------------------------------------
+</span></span><span style=display:flex><span>|                                    DescribeInstances                                    |
+</span></span><span style=display:flex><span>+----------------------+-------------------------+----------+-------------+---------------+
+</span></span><span style=display:flex><span>|  i-064751ba1b4c8340f |  SAP-FIS-CS-sapclnode2  |  running |  c5a.xlarge |  10.0.155.180 |
+</span></span><span style=display:flex><span>|  i-0e08f883d5c3b3747 |  SAP-FIS-CS-sapclnode1  |  running |  c5a.xlarge |  10.0.134.80  |
+</span></span><span style=display:flex><span>+----------------------+-------------------------+----------+-------------+---------------+
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ● Completed in 1.666s
+</span></span><span style=display:flex><span>……
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>## Conclusion
+</span></span><span style=display:flex><span>The SAP ASCS/ERS cluster for the SAPDemo application is partially operational:
+</span></span><span style=display:flex><span>• The ASCS instance is running correctly on sapclnode2
+</span></span><span style=display:flex><span>• The ERS instance is intentionally disabled (target-role=Stopped in the configuration)
+</span></span><span style=display:flex><span>• The virtual IP for ERS is still active on sapclnode1
+</span></span><span style=display:flex><span>• Both cluster nodes are online and the cluster has quorum
+</span></span><span style=display:flex><span>This configuration appears to be intentional based on the cluster configuration, but it means that enqueue replication is not currently active. In a normal high-availability setup, both ASCS and ERS would be running to ensure enqueue table replication in case of a failover.
+</span></span></code></pre></div><p>In this next scenario, we use CloudWatch MCP Server to investigate pacemaker cluster logs to determine the status of SAP ASCS. CloudWatch MCP Server invokes tools such as <code>describe_log_groups</code>, <code>analyze_log_groups</code>, and <code>execute_log_insights_query</code> to perform the analysis.</p><p><strong>Prompt: Check CloudWatch logs related to SAPDemo application for SAP ASCS ERS Pacemaker cluster events, alarms and issues.</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>&gt; Check CloudWatch logs related to SAPDemo  application for SAP ASCS ERS Pacemaker cluster events, alarms and issues. only use cloudwatch mcp server for this analysis.
+</span></span><span style=display:flex><span>&gt; I&#39;ll analyze the CloudWatch logs related to the SAPDemo application for SAP ASCS ERS Pacemaker cluster events, alarms, and issues using only the CloudWatch MCP server.
+</span></span><span style=display:flex><span>Let&#39;s start by identifying the relevant log groups for the SAPDemo application:
+</span></span><span style=display:flex><span>🛠️  Using tool: describe_log_groups (trusted) from mcp server awslabscloudwatch_mcp_server
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ● Running describe_log_groups with the param:
+</span></span><span style=display:flex><span> ⋮  {
+</span></span><span style=display:flex><span> ⋮    &#34;arguments&#34;: {
+</span></span><span style=display:flex><span> ⋮      &#34;log_group_name_prefix&#34;: &#34;PACEMAKER&#34;,
+</span></span><span style=display:flex><span> ⋮      &#34;region&#34;: &#34;us-east-1&#34;
+</span></span><span style=display:flex><span> ⋮    },
+</span></span><span style=display:flex><span> ⋮    &#34;name&#34;: &#34;describe_log_groups&#34;
+</span></span><span style=display:flex><span> ⋮  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ● Completed in 0.760s
+</span></span><span style=display:flex><span>……
+</span></span><span style=display:flex><span>### Analysis:
+</span></span><span style=display:flex><span>This log data shows that the ERS component (rsc_sap_ECD_ERS11) has been successfully started on sapclnode1. The cluster first cleared previous failure records, then migrated the IP resource (rsc_ip_ECD_ERS11) from node 2 to node 1, and finally started the ERS service on node 1.
+</span></span><span style=display:flex><span>The successful start is confirmed by the @rc-code=0 in the logs, indicating no errors. The monitoring operation is also successful, showing that the service is running properly.
+</span></span><span style=display:flex><span>This aligns with our previous findings where we had identified issues with the ERS component and cleared CloudWatch alarms for it. The logs now confirm that the ERS service has been successfully started and is
+</span></span><span style=display:flex><span>being monitored by the cluster, which explains why the service is now running despite previous alarms.
+</span></span><span style=display:flex><span>Would you like me to analyze any specific aspect of these logs in more detail or provide recommendations for ongoing monitoring of the ERS component?
+</span></span></code></pre></div><p><strong>Prompt: start SAP ERS service on node sapclnode1.</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>&gt; start SAP ERS services on node sapclnode1
+</span></span><span style=display:flex><span>&gt; I&#39;ll start the SAP ERS services on node sapclnode1.
+</span></span><span style=display:flex><span>🛠️  Using tool: execute_bash (trusted)
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ● I will run the following shell command:
+</span></span><span style=display:flex><span>aws ssm send-command --instance-ids i-0e08f883d5c3b3747 --document-name &#34;AWS-RunShellScript&#34; --parameters &#39;commands=[&#34;sudo crm resource status rsc_sap_ECD_ERS11&#34;]&#39; --output json
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ↳ Purpose: Checking the current status of the ERS resource
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>..
+</span></span><span style=display:flex><span>……
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>## Conclusion
+</span></span><span style=display:flex><span>The SAP ERS services have been successfully started on node sapclnode1. The enqueue replication is now active and functioning correctly, providing high availability for the SAP enqueue service. The cluster is now in a fully operational state with all resources running as expected.
+</span></span></code></pre></div><hr><h2 id=use-case-4-accelerate-root-cause-analysis-for-sap>Use-case 4: Accelerate Root-Cause Analysis for SAP</h2><p>In this scenario, we have an SAP cluster where ERS encountered an error due to misconfiguration. With the integration between Q CLI and CloudWatch MCP Server, traditional diagnostic challenges in complex SAP systems – where issues often propagate through multiple system layers – are eliminated. Q CLI generated the following task list:</p><ol><li>Prompt to check the status of the App Server.</li><li>Run <code>aws ec2 describe-instances</code> to check the SAP cluster status.</li><li>Run <code>ssm crm_mon</code> command to check the ASCS and ERS cluster.</li><li>Run <code>ssm sapcontrol</code> command to get the process list on node 1 and node 2.</li><li>Run <code>ssm crm</code> command to check cluster resource status and logs.</li><li>Run <code>ssm</code> command to check <code>pacemaker.log</code>.</li><li>Run <code>ssm crm</code> command to cleanup resources.</li><li>Run <code>ssm crm_mon</code> command to check cluster status.</li><li>Run <code>ssm sapcontrol</code> command to get the process list on node 2.</li><li>Summarize that the analysis results indicate the issue stems from a configuration problem.</li><li>After &ldquo;Prompt to troubleshoot this problem&rdquo;:<ul><li>Run <code>ssm</code> command to check SAP System Logs for ASCS and ERS on node 2.</li><li>Run <code>ssm</code> command to check SAP profiles of ASCS and ERS.</li><li>Run <code>ssm</code> command to check hostname configuration in hosts file on node 2.</li><li>Run <code>ssm</code> command to check IP addresses of node 1 and node 2.</li><li>Run <code>ssm</code> command to update hosts file on node 1 and node 2.</li><li>Run <code>ssm crm_mon</code> command to cleanup resources.</li><li>Run <code>ssm sapcontrol</code> command to get the process list on node 2.</li><li>Run <code>ssm sapcontrol</code> command to start ERS service, then check logs.</li><li>Run <code>ssm sapcontrol</code> command to start ASCS, then check logs.</li><li>Run <code>ssm crm_mon</code> command to stop cluster, then check status.</li><li>Run <code>ssm crm_mon</code> command to cleanup cluster resources.</li><li>Run <code>ssm crm_mon</code> command to start cluster, wait and check.</li><li>Run <code>ssm sapcontrol</code> command to get ASCS process list on node 1.</li><li>Run <code>ssm sapcontrol</code> command to start ASCS service, then check.</li><li>Summarize recommendations to fix the issue.</li></ul></li><li>After &ldquo;Prompt to start the SAP ERS service&rdquo;:<ul><li>Run <code>ssm crm</code> command to stop ASCS and ERS cluster resources.</li><li>Run <code>ssm</code> command to verify and update hosts file on node 1 and node 2.</li><li>Run <code>ssm</code> command to check hostname resolution on node 1 and node 2 (first update failed, but retried with a different method).</li><li>Run <code>ssm</code> command to check SAP Profiles of ASCS and ERS.</li><li>Run <code>ssm crm_mon</code> command to cleanup cluster resources.</li><li>Run <code>ssm sapcontrol</code> command to start SAP ASCS and ERS resources, then verify.</li><li>Summarize that ASCS and ERS services have been started successfully.</li></ul></li></ol><blockquote><p><strong>Important Note:</strong> The prompts and responses below have been abbreviated. You can download the <a href=https://d2908q01vomqb2.cloudfront.net/17ba0791499db908433b80f37c5fbc89b870084b/2025/07/17/Use-case-4-Accelerates-Root-Cause-Analysis-for-SAP.pdf>Use-case 4 – Accelerates Root-Cause Analysis for SAP</a> document to view the full prompts and responses from Q CLI.</p></blockquote><p><em>[Figure 5. Failed status of SAP Central Services (ASCS/ERS)]</em></p><p><strong>Prompt: What is the current status of SAP ASCS ERS cluster nodes for SAP application SAPDemo.</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>&gt; what is the current status of SAP ASCS ERS cluster nodes for sap application SAPDemo.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>&gt; I&#39;ll check the current status of the SAP ASCS/ERS cluster nodes for the SAPDemo SAP application.
+</span></span><span style=display:flex><span>🛠️  Using tool: execute_bash (trusted)
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ● I will run the following shell command:
+</span></span><span style=display:flex><span>aws ec2 describe-instances --filters &#34;Name=tag:Name,Values=*SAP-FIS-CS*&#34; --query &#34;Reservations[*].Instances[*].[InstanceId,Tags[?Key==&#39;Name&#39;].Value|[0],State.Name,InstanceType,PrivateIpAddress]&#34; --output table
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ↳ Purpose: Checking EC2 instances that are part of the SAP cluster
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>-------------------------------------------------------------------------------------------
+</span></span><span style=display:flex><span>|                                    DescribeInstances                                    |
+</span></span><span style=display:flex><span>+----------------------+-------------------------+----------+-------------+---------------+
+</span></span><span style=display:flex><span>|  i-064751ba1b4c8340f |  SAP-FIS-CS-sapclnode2  |  running |  c5a.xlarge |  10.0.155.180 |
+</span></span><span style=display:flex><span>|  i-0e08f883d5c3b3747 |  SAP-FIS-CS-sapclnode1  |  running |  c5a.xlarge |  10.0.134.80  |
+</span></span><span style=display:flex><span>+----------------------+-------------------------+----------+-------------+---------------+
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ● Completed in 1.815s
+</span></span><span style=display:flex><span>……..
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>## Current State Summary
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>The SAP ASCS/ERS cluster for SAPDemo is currently in a degraded state:
+</span></span><span style=display:flex><span>• The cluster infrastructure (corosync/pacemaker) is functioning correctly with quorum
+</span></span><span style=display:flex><span>• Both nodes are online and communicating
+</span></span><span style=display:flex><span>• The virtual IP addresses for both ASCS and ERS are properly assigned
+</span></span><span style=display:flex><span>• However, the actual SAP services (ASCS and ERS) are failing to start
+</span></span><span style=display:flex><span>• The application servers are showing YELLOW status, likely due to their dependency on the central services
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>This indicates a problem with the SAP services themselves rather than with the cluster infrastructure. The services may be failing to start due to configuration issues, file system problems, or other SAP-specific issues that need to be investigated further.
+</span></span></code></pre></div><p><strong>Prompt: Help me troubleshoot this problem.</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>&gt; help me troubleshoot this problem
+</span></span><span style=display:flex><span>&gt; I&#39;ll help you troubleshoot the issues with the SAP ASCS/ERS cluster for the SAPDemo application. Based on the current state, both the ASCS and ERS services are failing to start properly, even though the cluster infrastructure itself is functioning correctly.
+</span></span><span style=display:flex><span>Let&#39;s take a systematic approach to troubleshooting:
+</span></span><span style=display:flex><span>## Step 1: Check SAP-specific error logs
+</span></span><span style=display:flex><span>First, let&#39;s check the SAP system logs to understand why the services are failing to start:
+</span></span><span style=display:flex><span>🛠️  Using tool: execute_bash (trusted)
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ● I will run the following shell command:
+</span></span><span style=display:flex><span>aws ssm send-command --instance-ids i-064751ba1b4c8340f --document-name &#34;AWS-RunShellScript&#34; --parameters &#39;commands=[&#34;sudo su - ecdadm -c \&#34;tail -50 /usr/sap/ECD/ASCS10/work/dev_ms\&#34;&#34;]&#39; --output json
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ↳ Purpose: Checking SAP system logs for ASCS on node 2
+</span></span><span style=display:flex><span>..
+</span></span><span style=display:flex><span>&gt; Now let&#39;s check the ERS logs:
+</span></span><span style=display:flex><span>……..
+</span></span><span style=display:flex><span>&gt; Based on my troubleshooting, I&#39;ve identified the root cause of the issues with your SAP ASCS/ERS cluster and can provide you with a comprehensive solution:
+</span></span><span style=display:flex><span># SAP ASCS/ERS Cluster Troubleshooting Report
+</span></span><span style=display:flex><span>## Root Cause Analysis
+</span></span><span style=display:flex><span>After thorough investigation, I&#39;ve identified that the primary issue is related to hostname resolution. The error message MsSInit: NihostToAddr rc=(NIEHOST_UNKNOWN) in the ASCS logs clearly indicates that the
+</span></span><span style=display:flex><span>Message Server cannot resolve its hostname.
+</span></span><span style=display:flex><span>### Specific Issues Identified:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>1. Hostname Resolution Problems:
+</span></span><span style=display:flex><span>   • The SAP profiles are configured to use the hostnames ecdascsnode and ecdersnode, but these hostnames were not properly defined in the /etc/hosts files on both nodes.
+</span></span><span style=display:flex><span>   • We&#39;ve updated the hosts files, but the SAP services are still failing to start properly.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>2. IP Address Configuration:
+</span></span><span style=display:flex><span>   • The virtual IPs (192.168.48.201 for ASCS and 192.168.48.202 for ERS) are not being properly managed by the cluster.
+</span></span><span style=display:flex><span>   • Both virtual IPs are currently assigned to node 1 (sapclnode1), which is causing conflicts.
+</span></span><span style=display:flex><span>3. SAP Profile Configuration:
+</span></span><span style=display:flex><span>   • The SAP profiles are using hostnames that don&#39;t match the actual hostnames of the cluster nodes.
+</span></span><span style=display:flex><span>   • The ERS service is trying to connect to the ASCS service but failing with &#34;Connection refused&#34; errors.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>## Solution Steps
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>To fully resolve these issues, we need to take the following steps:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>### 1. Fix the Hostname Resolution
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>We&#39;ve already updated the /etc/hosts files on both nodes with the correct mappings, but we need to ensure that the SAP services can properly resolve the hostnames.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>### 2. Update the SAP Profiles
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>The SAP profiles need to be updated to use the correct hostnames or IP addresses. This is a more involved task that requires careful editing of the SAP profiles.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>### 3. Restart the Cluster Services in the Correct Order
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>The cluster services need to be restarted in the correct order to ensure proper operation:
+</span></span><span style=display:flex><span>1. Stop all SAP services
+</span></span><span style=display:flex><span>2. Stop the cluster
+</span></span><span style=display:flex><span>3. Fix the configuration
+</span></span><span style=display:flex><span>4. Start the cluster
+</span></span><span style=display:flex><span>5. Start the SAP services
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>### 4. Verify DNS Resolution
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>We need to ensure that DNS resolution is working correctly on both nodes.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>## Recommended Actions
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Here&#39;s a step-by-step plan to resolve the issues:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>1. Stop the cluster resources:
+</span></span><span style=display:flex><span>  bash
+</span></span><span style=display:flex><span>   sudo crm resource stop rsc_sap_ECD_ASCS10
+</span></span><span style=display:flex><span>   sudo crm resource stop rsc_sap_ECD_ERS11
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>2. Verify the hosts file configuration on both nodes:
+</span></span><span style=display:flex><span>  bash
+</span></span><span style=display:flex><span>   cat /etc/hosts
+</span></span><span style=display:flex><span>  Ensure that both nodes have the following entries:
+</span></span><span style=display:flex><span>   127.0.0.1 localhost
+</span></span><span style=display:flex><span>   10.0.134.80 sapclnode1.ec2.internal sapclnode1
+</span></span><span style=display:flex><span>   10.0.155.180 sapclnode2.ec2.internal sapclnode2
+</span></span><span style=display:flex><span>   192.168.48.201 ecdascsnode
+</span></span><span style=display:flex><span>   192.168.48.202 ecdersnode
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>3. Test hostname resolution:
+</span></span><span style=display:flex><span>  bash
+</span></span><span style=display:flex><span>   ping -c 3 ecdascsnode
+</span></span><span style=display:flex><span>   ping -c 3 ecdersnode
+</span></span><span style=display:flex><span>   ping -c 3 sapclnode1
+</span></span><span style=display:flex><span>   ping -c 3 sapclnode2
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>4. Update the SAP profiles if necessary:
+</span></span><span style=display:flex><span>   • Review the SAP profiles to ensure they&#39;re using the correct hostnames
+</span></span><span style=display:flex><span>   • Consider updating the profiles to use IP addresses instead of hostnames if resolution continues to be an issue
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>5. Clean up the cluster resources:
+</span></span><span style=display:flex><span>  bash
+</span></span><span style=display:flex><span>   sudo crm resource cleanup rsc_sap_ECD_ASCS10
+</span></span><span style=display:flex><span>   sudo crm resource cleanup rsc_sap_ECD_ERS11
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>6. Start the resources in the correct order:
+</span></span><span style=display:flex><span>  bash
+</span></span><span style=display:flex><span>   sudo crm resource start rsc_sap_ECD_ASCS10
+</span></span><span style=display:flex><span>   # Wait for ASCS to fully start
+</span></span><span style=display:flex><span>   sudo crm resource start rsc_sap_ECD_ERS11
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>7. Verify the SAP services are running:
+</span></span><span style=display:flex><span>  bash
+</span></span><span style=display:flex><span>   sudo su - ecdadm -c &#34;sapcontrol -nr 10 -function GetProcessList&#34;
+</span></span><span style=display:flex><span>   sudo su - ecdadm -c &#34;sapcontrol -nr 11 -function GetProcessList&#34;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>## Long-term Recommendations
+</span></span><span style=display:flex><span>1. Implement DNS Resolution: Consider implementing proper DNS resolution instead of relying on /etc/hosts files.
+</span></span><span style=display:flex><span>2. Review Cluster Configuration: Review the cluster configuration to ensure it&#39;s properly set up for SAP ASCS/ERS high availability.
+</span></span><span style=display:flex><span>3. Monitor the Cluster: Set up proper monitoring for the cluster to detect and alert on issues.
+</span></span><span style=display:flex><span>4. Document the Configuration: Document the cluster configuration and troubleshooting steps for future reference.
+</span></span><span style=display:flex><span>5. Regular Testing: Regularly test failover scenarios to ensure the cluster is working correctly.
+</span></span><span style=display:flex><span>By following these steps, you should be able to resolve the issues with your SAP ASCS/ERS cluster and ensure it&#39;s properly configured for high availability.
+</span></span></code></pre></div><p><strong>Prompt: Apply the above solution to fix the problem.</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>&gt; apply the above solution to fix the problem
+</span></span><span style=display:flex><span>&gt; I&#39;ll apply the solution to fix the SAP ASCS/ERS cluster issues. Let&#39;s follow the step-by-step plan:
+</span></span><span style=display:flex><span>## Step 1: Stop the cluster resources
+</span></span><span style=display:flex><span>&gt; I need to use SSM to execute these commands on the cluster nodes:
+</span></span><span style=display:flex><span>🛠️  Using tool: execute_bash (trusted)
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ● I will run the following shell command:
+</span></span><span style=display:flex><span>aws ssm send-command --instance-ids i-0e08f883d5c3b3747 --document-name &#34;AWS-RunShellScript&#34; --parameters &#39;commands=[&#34;sudo crm resource stop rsc_sap_ECD_ASCS10 &amp;&amp; sudo crm resource stop rsc_sap_ECD_ERS11&#34;]&#39; --output json
+</span></span><span style=display:flex><span> ⋮
+</span></span><span style=display:flex><span> ↳ Purpose: Stopping the cluster resources using SSM
+</span></span><span style=display:flex><span>..
+</span></span><span style=display:flex><span>&gt; ## Step 2: Verify the hosts file configuration on both nodes
+</span></span><span style=display:flex><span>……
+</span></span><span style=display:flex><span>&gt; Great! The solution has been successfully applied and the SAP ASCS/ERS cluster is now working correctly. Here&#39;s a summary of what we did:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>## Summary of the Fix
+</span></span><span style=display:flex><span>1. Fixed Hostname Resolution:
+</span></span><span style=display:flex><span>   • Updated the /etc/hosts files on both nodes with the correct mappings for all hostnames.
+</span></span><span style=display:flex><span>   • Verified that hostname resolution was working correctly by pinging the virtual hostnames.
+</span></span><span style=display:flex><span>2. Cleaned Up and Restarted Cluster Resources:
+</span></span><span style=display:flex><span>   • Stopped the cluster resources to ensure a clean state.
+</span></span><span style=display:flex><span>   • Cleaned up any failed resource actions.
+</span></span><span style=display:flex><span>   • Started the resources in the correct order: ASCS first, then ERS.
+</span></span><span style=display:flex><span>3. Verified the Services:
+</span></span><span style=display:flex><span>   • Confirmed that both the ASCS and ERS services are now running correctly.
+</span></span><span style=display:flex><span>   • The system instance list shows all components are GREEN (running).
+</span></span><span style=display:flex><span>## Current Status
+</span></span><span style=display:flex><span>• **Cluster Status**: All resources are running correctly.
+</span></span><span style=display:flex><span>• **ASCS Status**: The Message Server and Enqueue Server are both running on node 2 (sapclnode2).
+</span></span><span style=display:flex><span>• **ERS Status**: The Enqueue Replication Server is running on node 1 (sapclnode1).
+</span></span><span style=display:flex><span>• **Virtual IPs**: The virtual IPs are correctly assigned to the appropriate nodes.
+</span></span><span style=display:flex><span>## Recommendations for Long-term Stability
+</span></span><span style=display:flex><span>1. Regular Monitoring: Set up monitoring for the cluster to detect any issues early.
+</span></span><span style=display:flex><span>2. Failover Testing: Regularly test failover scenarios to ensure the cluster works correctly.
+</span></span><span style=display:flex><span>3. Documentation: Document the cluster configuration and troubleshooting steps for future reference.
+</span></span><span style=display:flex><span>4. DNS Resolution: Consider implementing proper DNS resolution instead of relying on /etc/hosts files.
+</span></span><span style=display:flex><span>The SAP ASCS/ERS cluster for the SAPDemo application is now functioning correctly. The issue was primarily related to hostname resolution, which we&#39;ve fixed by properly configuring the hosts files on both nodes.
+</span></span></code></pre></div><p><em>[Figure 6. Final healthy status of SAP Central Services (ASCS/ERS) cluster]</em></p><hr><h2 id=cost-considerations>Cost Considerations</h2><p>To deploy this solution, you need to consider the following factors:</p><ul><li><strong>Amazon Q CLI Cost</strong> is shown in <a href=https://aws.amazon.com/q/developer/pricing/#topic-0>[this link]</a>. We recommend using at least the Pro tier with 1,000 agentic requests per month ($19/month/user).</li><li><strong>Amazon CloudWatch Cost</strong> is shown in <a href=https://aws.amazon.com/cloudwatch/pricing/>[this link]</a>. In this experiment, we assume that the Free tier is sufficient.</li><li><strong>AWS Systems Manager Cost</strong> is shown in <a href=https://aws.amazon.com/systems-manager/pricing/>[this link]</a>. For the HA experiment, assuming there are a minimum of 6 nodes to manage:
+$0.01137 \text{ USD} \times 6 \text{ nodes} \times 8 \text{ hours} = 3.27456 \text{ USD}$</li><li><strong>No additional cost</strong> when using Amazon CloudWatch MCP Server.</li><li><strong>Estimated HA setup cost for SAP NetWeaver</strong> (calculated in us-east-1 region):<ul><li>2 × m5.large = 148.16 USD (ASCS and ERS)</li><li>2 × m5.xlarge = 280.32 USD (2 App Servers)</li><li>2 × r5.2xlarge = 756.32 USD (SAP HANA Primary and Secondary)</li></ul></li></ul><p><strong>Total Estimated Cost</strong> = 19 USD + 3.27456 USD + 39.4933 USD ≈ <strong>61.76786 USD</strong> for a one-day experiment.</p><hr><h2 id=conclusion>Conclusion</h2><p>CloudWatch MCP Server delivers unified observability across the entire SAP landscape within the customer environment. It consolidates SAP application logs, SAP HANA metrics, and AWS EC2 performance data. The system automatically correlates metrics across SAP components. Q CLI complements this capability by enabling natural language interaction with this rich dataset, allowing teams to easily investigate session response times, compare HANA memory consumption patterns, or identify waiting SAP processes during performance incidents.</p><p>CloudWatch MCP Server helps troubleshoot complex SAP issues by identifying anomalies through pattern analysis in system logs and transaction errors. It links infrastructure alarms to application behavior. Additionally, it provides historical context from similar past incidents. Q CLI enhances this capability by interpreting SAP error codes, generating diagnostic commands based on observed patterns, suggesting root causes, and recommending relevant SAP transaction codes for deeper investigation.</p><p>This integration bridges the knowledge gap between SAP BASIS administrators and AWS infrastructure teams by creating a shared operational view of the SAP system and translating between SAP terminology and AWS concepts. This combination reduces mean time to resolution by eliminating context switching, providing intelligent analysis of SAP-specific patterns, and enabling natural language interaction with monitoring data — leading to faster troubleshooting, higher reliability, and more efficient operations for critical SAP workloads on AWS.</p><p>As a next step, try applying this solution; you can achieve at least a 6x gain in productivity. Stay tuned for upcoming innovations regarding <a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html>Amazon CloudWatch</a>, <a href=https://github.com/awslabs/mcp>AWS Model Context Protocol Servers</a>, and <a href=https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html>Amazon Q for command line</a>.</p><hr><h2 id=join-the-sap-on-aws-discussion>Join the SAP on AWS Discussion</h2><p>In addition to your customer account team and AWS Support channels, we recently launched <a href=https://repost.aws/>re:Post</a> – A reimagined Q&amp;A experience for the AWS community. Our AWS for SAP Solution Architecture team regularly monitors the AWS for SAP topic to discuss and answer questions to support customers and partners. If your question is not related to technical support, join the discussion at re:Post and contribute to the community knowledge base.</p><hr><h2 id=acknowledgments>Acknowledgments</h2><p>I would like to thank the following team members for their contributions: <strong>Sreenath Middhi</strong> and <strong>Adam Hill</strong>.</p><p><strong>TAGS:</strong> <a href=https://aws.amazon.com/blogs/awsforsap/tag/sap-netweaver/>#SAP Netweaver</a>, <a href=https://aws.amazon.com/blogs/awsforsap/tag/aws-systems-manager/>AWS Systems Manager</a>, <a href=https://aws.amazon.com/blogs/awsforsap/tag/cloudwatch/>CloudWatch</a>, <a href=https://aws.amazon.com/blogs/awsforsap/tag/sap/>SAP</a>, <a href=https://aws.amazon.com/blogs/awsforsap/tag/sap-high-availability/>SAP High Availability</a></p><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=../../3-blogstranslated/3.1-blog1/ title="Blog 1"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=../../3-blogstranslated/3.3-blog3/ title="Blog 3" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=../../js/clipboard.min.js?1765293420></script><script src=../../js/perfect-scrollbar.min.js?1765293420></script><script src=../../js/perfect-scrollbar.jquery.min.js?1765293420></script><script src=../../js/jquery.sticky.js?1765293420></script><script src=../../js/featherlight.min.js?1765293420></script><script src=../../js/highlight.pack.js?1765293420></script><script>hljs.initHighlightingOnLoad()</script><script src=../../js/modernizr.custom-3.6.0.js?1765293420></script><script src=../../js/learn.js?1765293420></script><script src=../../js/hugo-learn.js?1765293420></script><link href=../../mermaid/mermaid.css?1765293420 rel=stylesheet><script src=../../mermaid/mermaid.js?1765293420></script><script>mermaid.initialize({startOnLoad:!0})</script><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,(e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date),(i=t.createElement(n),a=t.getElementsByTagName(n)[0]),i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-158079754-2","auto"),ga("send","pageview")</script></body></html>
