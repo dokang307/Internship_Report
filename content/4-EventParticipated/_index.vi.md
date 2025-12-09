@@ -1,5 +1,3 @@
-Dưới đây là phiên bản dịch sang tiếng Việt, giữ nguyên cấu trúc định dạng Markdown của bài báo cáo:
-
 ---
 
 title: "Các sự kiện đã tham gia"
