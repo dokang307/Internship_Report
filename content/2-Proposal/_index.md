@@ -215,7 +215,7 @@ The following [Cost Estimation](https://calculator.aws/#/estimate?id=6f03c76acaa
 
 | Name                | Title              | Stakeholder for                                            | Email / Contact Info |
 | :------------------ | :----------------- | :--------------------------------------------------------- | :------------------- |
-| **AWS FCJ Mentors** | Program Instructor | Academic oversight, project evaluation, internship credit. | [N/A]                |
+| **AWS FCJ Mentors** | Program Instructor | Academic oversight, project evaluation, internship credit. |                      |
 
 **Internship Team (FPT University)**
 
