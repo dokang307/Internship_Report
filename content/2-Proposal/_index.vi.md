@@ -102,7 +102,7 @@ Dự án được triển khai dựa trên các giả định sau. Nếu có tha
 
 Hệ thống DaiVietBlood sử dụng kiến trúc **Serverless-First** trên AWS Cloud, ưu tiên khả năng mở rộng, bảo mật và tối ưu vận hành.
 
-**(Tham khảo hình ảnh sơ đồ kiến trúc đã cung cấp trong tài liệu gốc)**
+![Ảnh kiến trúc AWS](/images/AWS_Architecture.png)
 
 **Các thành phần chính:**
 

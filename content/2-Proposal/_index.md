@@ -102,7 +102,7 @@ The project is implemented based on the following assumptions. If changes occur,
 
 The DaiVietBlood system utilizes a **Serverless-First** architecture on AWS Cloud, prioritizing scalability, security, and operational optimization.
 
-**(Refer to the architecture diagram provided in the original document)**
+![AWS architecture picture](/images/AWS_Architecture.png)
 
 **Key Components:**
 
